@@ -1,15 +1,18 @@
-// src/reducers/index.tsx
+import { combineReducers } from 'redux';
+// import system from './systemReducer';
+// import isFetching from './fetchingReducer';
+// import warning from './warningReducer';
+import metaMask from './metaMaskReducer';
 
-import { EnthusiasmAction } from '../actions';
-import { StoreState } from '../types/index';
-import { INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM } from '../constants/index';
+const appReducer = combineReducers({
+  // system,
+  // isFetching,
+  // warning,
+  metaMask
+});
 
-export function enthusiasm(state: StoreState, action: EnthusiasmAction): StoreState {
-    switch (action.type) {
-        case INCREMENT_ENTHUSIASM:
-            return { ...state, enthusiasmLevel: state.enthusiasmLevel + 1 };
-        case DECREMENT_ENTHUSIASM:
-            return { ...state, enthusiasmLevel: Math.max(1, state.enthusiasmLevel - 1) };
-    }
-    return state;
+const rootReducer = (state, action) => {
+  return appReducer(state, action);
 }
+
+export default rootReducer;

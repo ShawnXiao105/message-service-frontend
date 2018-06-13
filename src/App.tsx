@@ -14,13 +14,14 @@ import Mailbox from './components/MailBox';
 // }
 
 class App extends React.Component<any, any> {
-    constructor(props: any) {
+    constructor(props: any, context) {
         super(props);
         this.state = {mailboxes: this.props.mailboxes, mailbox_id: null};
+        this.handleSelectMailbox = this.handleSelectMailbox.bind(this);
     }
 
     handleSelectMailbox(id) {
-        this.setState({mailboxId: id});
+        this.setState({mailbox_id: id});
     }
 
     public render() {
