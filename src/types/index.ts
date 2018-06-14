@@ -1,6 +1,6 @@
 // src/types/index.tsx
 
-export interface HelloStoreState {
+export interface StoreState {
     languageName: string;
     enthusiasmLevel: number;
 }
