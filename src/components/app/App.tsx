@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './App.css';
-import NoneSelected from './components/NoneSelected';
-import MailboxList from './components/MailboxList';
-import Mailbox from './components/MailBox';
+import NoneSelected from './components/Mail/NoneSelected';
+import MailboxList from './components/Mail/MailboxList';
+import Mailbox from './components/Mail/MailBox';
 // import Email from "./components/Email";
 
 // import logo from './logo.svg';

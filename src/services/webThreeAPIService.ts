@@ -6,7 +6,7 @@ import { configs } from '../utils/configs';
 import { SupportedProviderTypes } from "../types/types";
 
 export class Web3APIService {
-    private injectedWeb3: Web3;
+    private injectedWeb3: Web3;w
     private web3: Web3;
 
     /**
